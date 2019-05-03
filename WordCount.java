@@ -40,7 +40,7 @@ public class WordCount {
 
 			// change these
 
-      for (int i =0, i < token.length(); i++){
+      for (int i = 0; i < token.length(); i++){
         char c = token.charAt(i);
         char ch = c.toLowerCase();
 
