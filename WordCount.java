@@ -42,10 +42,10 @@ public class WordCount {
 
       for (int i = 0; i < token.length(); i++){
         char c = token.charAt(i);
-        char ch = c.toLowerCase();
+        char ch = Character.toLowerCase(c);
 
-        if (ch.isAlphabetic()) {
-          context.write(ch.toString(), one);
+        if (Character.isAlphabetic(ch)) {
+          context.write(Character.toString(ch), one);
         }
       }
 
