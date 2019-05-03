@@ -45,7 +45,9 @@ public class WordCount {
         char ch = Character.toLowerCase(c);
 
         if (Character.isAlphabetic(ch)) {
-          context.write(Character.toString(ch), one);
+          String st = Character.toString(ch);
+          word.set(st);
+          context.write(word, one);
         }
       }
 
