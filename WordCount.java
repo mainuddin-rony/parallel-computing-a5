@@ -28,21 +28,31 @@ public class WordCount {
 	    StringTokenizer itr = new StringTokenizer(value.toString());
 		while (itr.hasMoreTokens()) {
 			String token = itr.nextToken();
-			
-			// TODO: Write me. 
+
+			// TODO: Write me.
 			// For each token t:
 			//		For each letter l in t:
 			// 			if l is a letter
 			//				context.write < l, one>
-		
+
 			// Useful methods include Character.toLowerCase(), Character.isAlphabetic(),
 			// String.charAt(), and Character.toString()
 
 			// change these
-			word.set(token);
-			context.write(word, one);
-		
-		
+
+      for (int i =0, i < token.length(); i++){
+        char c = token.charAt(i);
+        char ch = c.toLowerCase();
+
+        if (ch.isAlphabetic()) {
+          context.write(ch.toString(), one);
+        }
+      }
+
+			// word.set(token);
+			// context.write(word, one);
+
+
 		}
     }
   }
